@@ -134,6 +134,7 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="OpenGLTest.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +143,7 @@
     <None Include="res\shaders\shader.vs" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="OpenGLTest.h" />
   </ItemGroup>
