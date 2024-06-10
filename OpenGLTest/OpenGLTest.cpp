@@ -166,10 +166,11 @@ int main()
   }
   stbi_image_free(data);
 
-  shader.use();
-  shader.setInt("texture1", 0);
-  shader.setInt("texture2", 1);
+  //shader.use();
+  //shader.setInt("texture1", 0);
+  //shader.setInt("texture2", 1);
 
+  Model monkey("res/models/backpack/backpack.obj");
 
   while (!glfwWindowShouldClose(window))
   {
@@ -195,24 +196,30 @@ int main()
     glm::mat4 view = camera.getViewMatrix();
     shader.setMat4("view", view);
 
-    // render boxes
-    glBindVertexArray(VAO);
-    for (unsigned int i = 0; i < 10; i++)
-    {
-      glm::mat4 model = glm::mat4(1.0f);
-      model = glm::translate(model, cubePositions[i]);
-      float angle = 20.0f * i;
-      model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+    glm::mat4 model = glm::mat4(1.0f);
+    model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+    model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+    shader.setMat4("model", model);
+    monkey.Draw(shader);
 
-      if (i % 2 == 0)
-      {
-        model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
-      }
+    //// render boxes
+    //glBindVertexArray(VAO);
+    //for (unsigned int i = 0; i < 10; i++)
+    //{
+    //  glm::mat4 model = glm::mat4(1.0f);
+    //  model = glm::translate(model, cubePositions[i]);
+    //  float angle = 20.0f * i;
+    //  model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
 
-      shader.setMat4("model", model);
+    //  if (i % 2 == 0)
+    //  {
+    //    model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
+    //  }
 
-      glDrawArrays(GL_TRIANGLES, 0, 36);
-    }
+    //  shader.setMat4("model", model);
+
+    //  glDrawArrays(GL_TRIANGLES, 0, 36);
+    //}
 
     glfwSwapBuffers(window);
     glfwPollEvents();

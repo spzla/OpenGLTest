@@ -15,6 +15,7 @@
 
 #include "Shader.h"
 #include "Camera.h"
+#include "Model.h"
 
 void resize(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);

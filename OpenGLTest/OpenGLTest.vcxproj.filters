@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\shaders">
+      <UniqueIdentifier>{364a1da9-b531-44a4-9546-50385be95a08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{c237f4df-e181-430d-abc5-11ec3cec7810}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGLTest.cpp">
@@ -30,14 +36,20 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="res\shaders\shader.vs">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\shaders</Filter>
     </None>
     <None Include="res\shaders\shader.fs">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -50,16 +62,22 @@
     <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\textures\container.jpg">
-      <Filter>Resource Files</Filter>
+    <Image Include="res\textures\peter.jpg">
+      <Filter>Resource Files\textures</Filter>
     </Image>
     <Image Include="res\textures\awesomeface.png">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="res\textures\peter.jpg">
-      <Filter>Resource Files</Filter>
+    <Image Include="res\textures\container.jpg">
+      <Filter>Resource Files\textures</Filter>
     </Image>
   </ItemGroup>
 </Project>
