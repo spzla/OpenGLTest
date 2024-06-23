@@ -124,7 +124,7 @@ std::vector<Texture> Model::loadMaterialTextures(aiMaterial* mat, aiTextureType 
       textures_loaded.push_back(texture);
     }
   }
-  return std::vector<Texture>();
+  return textures;
 }
 
 unsigned int TextureFromFile(const char* path, const std::string& directory)
@@ -155,6 +155,7 @@ unsigned int TextureFromFile(const char* path, const std::string& directory)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
     stbi_image_free(data);
   }
   else

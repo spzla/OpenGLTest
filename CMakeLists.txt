@@ -29,7 +29,7 @@ set (SOURCES
   "src/Model.cpp"
   "src/glad.c"
   "src/stb_image.cpp"
-)
+) 
 
 include_directories ( include/ )
 

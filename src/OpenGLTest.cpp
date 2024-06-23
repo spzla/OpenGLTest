@@ -29,7 +29,8 @@ int main()
   {
     std::cout << "Failed to create GLFW window" << std::endl;
     glfwTerminate();
-    return -1;
+    
+    -1;
   }
   glfwMakeContextCurrent(window);
   glfwSetFramebufferSizeCallback(window, resize);
@@ -48,7 +49,7 @@ int main()
 
   Shader shader("res/shaders/shader.vs", "res/shaders/shader.fs");
 
-  Model monkey("res/models/fryingpan/fryingpan.fbx");
+  Model monkey("res/models/backpack/backpack.obj");
 
   while (!glfwWindowShouldClose(window))
   {
